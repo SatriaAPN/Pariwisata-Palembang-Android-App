@@ -20,25 +20,29 @@
                 android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Wisata" />
+                android:text="Wisata"
+                android:onClick="launchActivityWisata"/>
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Kuliner" />
+                android:text="Kuliner"
+                android:onClick="launchActivityKuliner"/>
 
             <Button
                 android:id="@+id/button3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hotel" />
+                android:text="Penginapan"
+                android:onClick="launchActivityPenginapan"/>
 
             <Button
                 android:id="@+id/button4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Rumah Ibadah" />
+                android:text="Rumah Ibadah"
+                android:onClick="launchActivityTempatIbadah"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
