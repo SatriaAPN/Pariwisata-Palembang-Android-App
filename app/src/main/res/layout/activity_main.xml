@@ -15,6 +15,100 @@
 
             <include layout="@layout/header_main" />
 
+            <LinearLayout
+                android:padding="20dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:text="Favorit"
+                    android:textSize="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_marginRight="20dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:backgroundTint="@color/teal_200"
+                            android:background="@drawable/background"
+                            android:layout_width="150dp"
+                            android:layout_height="100dp">
+                            <Button
+                                android:backgroundTint="@color/teal_200"
+                                android:textColor="@color/white"
+                                android:text="WISATA"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginRight="20dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:backgroundTint="@color/purple_200"
+                            android:background="@drawable/background"
+                            android:layout_width="150dp"
+                            android:layout_height="100dp">
+                            <Button
+                                android:backgroundTint="@color/purple_200"
+                                android:textColor="@color/white"
+                                android:text="KULINER"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginRight="20dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:backgroundTint="@color/purple_700"
+                            android:background="@drawable/background"
+                            android:layout_width="150dp"
+                            android:layout_height="100dp">
+                            <Button
+                                android:backgroundTint="@color/purple_700"
+                                android:textColor="@color/white"
+                                android:text="HOTEL"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginRight="20dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:backgroundTint="@color/teal_700"
+                            android:background="@drawable/background"
+                            android:layout_width="150dp"
+                            android:layout_height="100dp">
+                            <Button
+                                android:backgroundTint="@color/teal_700"
+                                android:textColor="@color/white"
+                                android:text="RUMAH IBADAH"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+            </LinearLayout>
+
 
             <Button
                 android:id="@+id/button"
@@ -39,9 +133,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Rumah Ibadah" />
-
-
-
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
