@@ -137,6 +137,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <ImageButton
+                            android:backgroundTint="@color/white"
                             android:id="@+id/button_wisata"
                             android:onClick="button_wisata"
                             android:adjustViewBounds="true"
@@ -159,6 +160,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <ImageButton
+                            android:backgroundTint="@color/white"
                             android:id="@+id/button_hotel"
                             android:onClick="button_hotel"
                             android:adjustViewBounds="true"
@@ -186,6 +188,7 @@
                         android:layout_height="wrap_content">
 
                         <ImageButton
+                            android:backgroundTint="@color/white"
                             android:id="@+id/button_kuliner"
                             android:onClick="button_kuliner"
                             android:layout_width="70dp"
@@ -208,6 +211,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <ImageButton
+                            android:backgroundTint="@color/white"
                             android:id="@+id/button_ibadah"
                             android:onClick="button_ibadah"
                             android:adjustViewBounds="true"
