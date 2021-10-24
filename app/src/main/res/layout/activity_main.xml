@@ -24,7 +24,7 @@
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:text="Favorit"
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <HorizontalScrollView
@@ -110,18 +110,19 @@
         </HorizontalScrollView>
             </LinearLayout>
             <LinearLayout
-                android:padding="20dp"
+                android:padding="18dp"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
                     android:textStyle="bold"
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/black"
                     android:text="KATEGORI"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <LinearLayout
+                    android:layout_marginTop="10dp"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
