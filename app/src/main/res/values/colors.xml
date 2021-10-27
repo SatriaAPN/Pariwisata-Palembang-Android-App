@@ -11,4 +11,5 @@
     <color name="colorPrimary">#12A598</color>
     <color name="colorPrimaryDark">#ff42b549</color>
     <color name="colorAccent">#FBC02D</color>
+    <color name="orange">#E5A643</color>
 </resources>
