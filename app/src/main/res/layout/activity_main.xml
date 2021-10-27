@@ -139,6 +139,7 @@
                         <ImageButton
                             android:backgroundTint="@color/white"
                             android:id="@+id/button"
+                            android:onClick="wisataActivity"
                             android:adjustViewBounds="true"
                             android:cropToPadding="true"
                             android:src="@drawable/ic_wisata"
@@ -161,6 +162,7 @@
                         <ImageButton
                             android:backgroundTint="@color/white"
                             android:id="@+id/button3"
+                            android:onClick="HotelActivity"
                             android:adjustViewBounds="true"
                             android:cropToPadding="true"
                             android:src="@drawable/ic_hotel"
@@ -188,6 +190,7 @@
                         <ImageButton
                             android:backgroundTint="@color/white"
                             android:id="@+id/button2"
+                            android:onClick="KulinerActivity"
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
@@ -210,6 +213,7 @@
                         <ImageButton
                             android:backgroundTint="@color/white"
                             android:id="@+id/button4"
+                            android:onClick="PrayPlaceActivity"
                             android:adjustViewBounds="true"
                             android:cropToPadding="true"
                             android:src="@drawable/ic_ibadah"
