@@ -25,6 +25,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ourshop.R;
+import com.example.ourshop.SetterGetter;
 import com.example.ourshop.adapter.MainAdapter;
 import com.example.ourshop.api.Api;
 import com.example.ourshop.decoration.LayoutMarginDecoration;
@@ -37,10 +38,17 @@ import java.util.Date;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    RecyclerView recyclerView;
+
+    ArrayList<SetterGetter> datamenu;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        recyclerView = findViewById(R.id.rv_menu);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             getWindow().getDecorView().setSystemUiVisibility
@@ -110,4 +118,14 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             });
+
+    public void addData(){
+
+        datamenu = new ArrayList<>();
+        datamenu.add(new SetterGetter("WISATA", "logomenu1"));
+        datamenu.add(new SetterGetter("KULINER", "logomenu2"));
+        datamenu.add(new SetterGetter("HOTEL", "logomenu3"));
+        datamenu.add(new SetterGetter("RUMAH IBADAH", "logomenu4"));
+
+    }
 }

@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:fitsSystemWindows="true">
 
     <androidx.core.widget.NestedScrollView
@@ -15,218 +16,18 @@
 
             <include layout="@layout/header_main" />
 
-            <LinearLayout
-                android:padding="20dp"
-                android:orientation="vertical"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_menu"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:text="Favorit"
-                    android:textSize="20sp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-                <HorizontalScrollView
-                    android:scrollbars="none"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <LinearLayout
-                            android:layout_marginRight="10dp"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:backgroundTint="@color/teal_200"
-                            android:background="@drawable/background"
-                            android:layout_width="130dp"
-                            android:layout_height="80dp">
-                            <Button
-                                android:backgroundTint="@color/teal_200"
-                                android:textColor="@color/white"
-                                android:text="WISATA"
-                                android:textStyle="bold"
-                                android:textSize="20sp"
-                                android:layout_width="130dp"
-                                android:layout_height="80dp"/>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_marginRight="10dp"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:backgroundTint="@color/purple_200"
-                            android:background="@drawable/background"
-                            android:layout_width="130dp"
-                            android:layout_height="80dp">
-                            <Button
-                                android:backgroundTint="@color/purple_200"
-                                android:textColor="@color/white"
-                                android:text="KULINER"
-                                android:textStyle="bold"
-                                android:textSize="20sp"
-                                android:layout_width="130dp"
-                                android:layout_height="80dp"/>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_marginRight="10dp"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:backgroundTint="@color/purple_700"
-                            android:background="@drawable/background"
-                            android:layout_width="130dp"
-                            android:layout_height="80dp">
-                            <Button
-                                android:backgroundTint="@color/purple_700"
-                                android:textColor="@color/white"
-                                android:text="HOTEL"
-                                android:textStyle="bold"
-                                android:textSize="20sp"
-                                android:layout_width="130dp"
-                                android:layout_height="80dp"/>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_marginRight="10dp"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:backgroundTint="@color/teal_700"
-                            android:background="@drawable/background"
-                            android:layout_width="130dp"
-                            android:layout_height="80dp">
-                            <Button
-                                android:backgroundTint="@color/teal_700"
-                                android:textColor="@color/white"
-                                android:text="RUMAH IBADAH"
-                                android:textStyle="bold"
-                                android:textSize="20sp"
-                                android:layout_width="130dp"
-                                android:layout_height="80dp"/>
-                        </LinearLayout>
-                    </LinearLayout>
-                </HorizontalScrollView>
-            </LinearLayout>
-            <LinearLayout
-                android:padding="18dp"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:textStyle="bold"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:text="KATEGORI"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-                <LinearLayout
-                    android:layout_marginTop="10dp"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <LinearLayout
-                        android:layout_weight="1"
-                        android:padding="20dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:backgroundTint="@color/teal_200"
-                        android:background="@drawable/background"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <ImageButton
-                            android:backgroundTint="@color/white"
-                            android:id="@+id/button"
-                            android:onClick="wisataActivity"
-                            android:adjustViewBounds="true"
-                            android:cropToPadding="true"
-                            android:src="@drawable/ic_wisata"
-                            android:layout_width="70dp"
-                            android:layout_height="wrap_content"/>
-                    </LinearLayout>
-                    <RelativeLayout
-                        android:layout_width="10dp"
-                        android:layout_height="match_parent"/>
-                    <LinearLayout
-                        android:layout_weight="1"
-                        android:padding="20dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:backgroundTint="@color/purple_200"
-                        android:background="@drawable/background"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <ImageButton
-                            android:backgroundTint="@color/white"
-                            android:id="@+id/button3"
-                            android:onClick="HotelActivity"
-                            android:adjustViewBounds="true"
-                            android:cropToPadding="true"
-                            android:src="@drawable/ic_hotel"
-                            android:layout_width="70dp"
-                            android:layout_height="wrap_content"/>
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_marginTop="10dp"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <LinearLayout
-                        android:layout_weight="1"
-                        android:padding="20dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:backgroundTint="@color/orange"
-                        android:background="@drawable/background"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <ImageButton
-                            android:backgroundTint="@color/white"
-                            android:id="@+id/button2"
-                            android:onClick="KulinerActivity"
-                            android:layout_width="70dp"
-                            android:layout_height="wrap_content"
-                            android:adjustViewBounds="true"
-                            android:cropToPadding="true"
-                            android:src="@drawable/ic_culinary" />
-                    </LinearLayout>
-                    <RelativeLayout
-                        android:layout_width="10dp"
-                        android:layout_height="match_parent"/>
-                    <LinearLayout
-                        android:layout_weight="1"
-                        android:padding="20dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:backgroundTint="@color/purple_700"
-                        android:background="@drawable/background"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <ImageButton
-                            android:backgroundTint="@color/white"
-                            android:id="@+id/button4"
-                            android:onClick="PrayPlaceActivity"
-                            android:adjustViewBounds="true"
-                            android:cropToPadding="true"
-                            android:src="@drawable/ic_ibadah"
-                            android:layout_width="70dp"
-                            android:layout_height="wrap_content"/>
-                    </LinearLayout>
-                </LinearLayout>
-
-
-            </LinearLayout>
+                android:layout_height="match_parent"
+                android:layout_blow="@id/header_main"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="19dp"
+                android:layout_marginRight="19dp"
+                tools:listitem="@layout/item_dahsboard"
+                />
 
         </LinearLayout>
-
 
     </androidx.core.widget.NestedScrollView>
 

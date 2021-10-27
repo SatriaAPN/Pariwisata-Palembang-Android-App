@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,6 +12,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ourshop.R;
+import com.example.ourshop.SetterGetter;
 import com.example.ourshop.model.ModelMapLocation;
 import com.example.ourshop.model.ModelPrayPlace;
 import com.google.android.gms.maps.CameraUpdate;
@@ -25,9 +27,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.util.HashSet;
 import java.util.List;
 
-/**
- * Created by Azhar Rivaldi on 22-12-2019.
- */
 
 public class PrayPlaceAdapter extends RecyclerView.Adapter<PrayPlaceAdapter.ViewHolder> {
 
@@ -42,8 +41,7 @@ public class PrayPlaceAdapter extends RecyclerView.Adapter<PrayPlaceAdapter.View
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_pray_place, parent, false);
-
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_dahsboard, parent, false);
         ViewHolder viewHolder = new ViewHolder(parent.getContext(), v);
         mMapViews.add(viewHolder.mapView);
 
@@ -52,6 +50,17 @@ public class PrayPlaceAdapter extends RecyclerView.Adapter<PrayPlaceAdapter.View
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+
+        SetterGetter listdata;
+        final SetterGetter getData = listdata.get(position);
+        String titlemenu = getData.getTitle();
+        String logomenu =getData.getImg();
+
+        holder.titlemenu.setText(titlemenu);
+        if (logomenu.equals("logomenu1")){
+            holder.imageView.setImageResource(R.drawable.ic_destination);
+        }else if (logomenu.equals("logomenu2")){
+            holder.imageView.setImageResource(R.drawable.ic_wisata);
         final ModelPrayPlace data = items.get(position);
 
         holder.mapView.getMapAsync(new OnMapReadyCallback() {
@@ -69,7 +78,7 @@ public class PrayPlaceAdapter extends RecyclerView.Adapter<PrayPlaceAdapter.View
         });
 
         holder.mapView.onResume();
-        holder.txtPlaceName.setText(data.getTxtTempatIbadah());
+        holder.titlemenu.setText(data.getTxtTempatIbadah());
     }
 
     @Override
@@ -84,7 +93,8 @@ public class PrayPlaceAdapter extends RecyclerView.Adapter<PrayPlaceAdapter.View
     //Class Holder
     class ViewHolder extends RecyclerView.ViewHolder implements OnMapReadyCallback {
 
-        public TextView txtPlaceName;
+        public ImageView imageView;
+        public TextView titlemenu;
         public CardView cvPrayList;
         public MapView mapView;
         private GoogleMap mGoogleMap;
@@ -95,10 +105,10 @@ public class PrayPlaceAdapter extends RecyclerView.Adapter<PrayPlaceAdapter.View
             super(itemView);
 
             mContext = context;
-
+            imageView = itemView.findViewById(R.id.iv_logo_menu);
             cvPrayList = itemView.findViewById(R.id.cvPrayList);
             mapView = itemView.findViewById(R.id.mapView);
-            txtPlaceName = itemView.findViewById(R.id.txtPlaceName);
+            titlemenu = itemView.findViewById(R.id.tv_title_menu);
 
             mapView.onCreate(null);
             mapView.getMapAsync(this);

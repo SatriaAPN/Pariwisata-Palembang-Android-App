@@ -30,7 +30,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="160dp"
                     android:layout_marginTop="50dp"
                     app:cardCornerRadius="5dp"
                     app:cardUseCompatPadding="true">
@@ -60,11 +60,13 @@
                         </LinearLayout>
 
                         <LinearLayout
+
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
                             android:padding="10dp">
+
 
                             <TextView
                                 android:id="@+id/tvDate"
@@ -79,6 +81,25 @@
                                 app:drawableStartCompat="@android:drawable/ic_menu_today" />
 
                         </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:drawablePadding="10dp"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            android:drawableStart="@drawable/icon_lokasi"
+                         </LinearLayout>
 
                     </LinearLayout>
 
